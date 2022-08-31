@@ -1,0 +1,46 @@
+<p>update-resto works!</p>
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> Your data Added Successfully.
+    <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<form [formGroup]="editResto"  (ngSubmit)="updateRestoform()">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Name </label>
+        <input type="text" class="form-control" ngModel formControlName="name" placeholder="Enter The Name">
+        
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email</label>
+        <input type="email" class="form-control" ngModel formControlName="email" placeholder="Enter The email">
+        
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Address</label>
+        <input type="text" class="form-control" ngModel formControlName="address" placeholder="Enter The Address">
+        
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+    
+
+</form>
+
+
+<br><br>
+
+<!-- <div class="pract">
+    <label for="salaryinput">Enter your salary : </label><br><br>
+    <input type="number" #salaryinput placeholder="Enter your salary" (keyup)="getData(salaryinput.value)"><br>    
+    <br><br>
+    <h3 *ngIf="this.displaysalary >= 50  else elseblock">
+        you are rich
+    </h3>
+    <ng-template #elseblock>
+        <h3>you are poor</h3>
+    </ng-template>
+</div> -->

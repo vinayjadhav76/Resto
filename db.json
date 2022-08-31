@@ -1,0 +1,40 @@
+{
+  "restaurant": [
+    {
+      "id": 1,
+      "name": "KFC restaurant",
+      "address": "sectore 10",
+      "email": "kfc@gmail.com"
+    },
+    {
+      "name": "mc_d",
+      "address": "sectore 40",
+      "email": "mc@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "om sweets",
+      "email": "omsweet@gmail.com",
+      "address": "sectore 50",
+      "id": 3
+    },
+    {
+      "name": "burger king",
+      "email": "burgerking@gmail.com",
+      "address": "sectore 30",
+      "id": 4
+    },
+    {
+      "name": "chings chinees corner",
+      "email": "chings@gmail.com",
+      "address": "sectore 60",
+      "id": 5
+    },
+    {
+      "name": "momoLand",
+      "email": "momoland@gmail.com",
+      "address": "sectore 80",
+      "id": 6
+    }
+  ]
+}
