@@ -11,5 +11,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+satHello(){
+  console.log('hellow form class');
+  
+}
 }

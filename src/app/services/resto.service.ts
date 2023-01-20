@@ -7,6 +7,7 @@ import { HttpClient} from '@angular/common/http'
 export class RestoService {
   url="http://localhost:3000/restaurant"
   regurl="http://localhost:3000/"
+  sqlApi="http://creatorkart.com/career_prep/CareerPrepApi"
   constructor( private http : HttpClient) { }
   getList(){
     return this.http.get(this.url)
@@ -32,4 +33,7 @@ export class RestoService {
     return this.http.post(this.regurl + "User" , data)
   }
 
+  userApi(){
+   return this.http.get(this.sqlApi)
+  }
 }

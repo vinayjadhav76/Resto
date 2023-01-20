@@ -1,0 +1,23 @@
+<app-filter 
+[one]="getOneStarHotel()"
+[two]="getTwoStarHotel()"
+[three]="getThreeStarHotel()"
+[four]="getFourStarHotel()"
+[five]="getFiveStarHotel()"
+>  </app-filter>
+
+  
+  
+
+<section>
+    <div class="row card-box d-flex" >
+        <div class="card col-md-4 m-3" style="width: 18rem;" *ngFor="let h of hotels">
+            <img class="card-img-top" src="{{h.dp}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{h.name}}</h5>
+                <p class="card-text">{{h.address}}</p>
+                <a href="#" class="btn btn-primary">{{h.stars}}</a>
+            </div>
+        </div>
+    </div>
+</section>

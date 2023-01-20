@@ -29,4 +29,73 @@
     
 
 </form>
+<br><br>
 
+<section class="my-5 py-5">
+  <div>
+    <label for="dob">DOB: </label>
+    <input type="date" #dobInput (blur)="calculateAge()">
+  </div>
+  <div>
+    <label for="age">AGE: </label>
+    <input type="text" #ageInput>
+  </div>
+</section>
+<section>
+  <h1>Cost Calculator</h1>
+  <br>
+  Quantity: <input type="number" [(ngModel)]="quantity">
+  Price: <input type="number" [(ngModel)]="price">
+<br><br>
+Dollar: {{quantity * price}}
+
+</section>
+<app-login></app-login>
+
+
+<section>
+  <input type="text" #para (keyup)="0">
+  <button (click)="sayhello(para)">say hello</button>
+  <p>{{para.value}}</p>
+</section>
+
+<br><br>
+
+<div *ngIf="alert2" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> Your data Added Successfully.
+    <button (click)="closeAlert2()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <br><br>
+<div class="search" [ngClass]="{changebackground : searchValue !='' }">
+    Search: 
+    <!-- <input  type="text" (input)="changeSearchValue($event)"><br> -->
+    <input  type="text" [(ngModel)]="searchValue"> <br>
+
+    <span>You Search For "{{ searchValue }}"</span>
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Status</th>
+        <th scope="col">Presenty</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of data" [ngStyle]="{background: p.status ==='Available' ? 'rgb(120, 248, 120)' : 'rgb(255, 141, 141)'}">
+        <th scope="row">{{p.id}}</th>
+        <td>{{p.name}}</td>
+        <td>{{p.age}}</td>
+        <td [ngStyle]="{color: p.status === 'Available' ? 'Green':'red'}">{{p.status}}</td>
+        <td *ngIf="p.presenty === 'Present'; else alternate">{{p.presenty}}</td>
+        <ng-template #alternate>Hey Buddy</ng-template> 
+      </tr>      
+    </tbody>
+  </table>
+
+  

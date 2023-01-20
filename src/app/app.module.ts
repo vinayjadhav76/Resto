@@ -9,7 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { UpdateRestoComponent } from './update-resto/update-resto.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BranchesModule } from './branches/branches.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,13 +18,15 @@ import { ReactiveFormsModule } from '@angular/forms'
     ListRestoComponent,
     LoginComponent,
     RegisterComponent,
-    UpdateRestoComponent
+    UpdateRestoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
+    BranchesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

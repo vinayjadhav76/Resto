@@ -22,3 +22,21 @@
       </tr>      
     </tbody>
   </table>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th>api User Name</th>
+      <th>2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of usercollection">
+        <td>{{data.userid}}</td>
+        <td>{{data.firstname}}</td>
+        <td>{{data.lastname}}</td>        
+      </tr>
+    </tbody>
+  </table>

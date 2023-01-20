@@ -9,12 +9,15 @@ export class ListRestoComponent implements OnInit {
 
   constructor(private resto: RestoService) { }
   collection: any = [];
-
+usercollection:any=[]
   ngOnInit(): void {
 
     this.resto.getList().subscribe((result) => {
       console.warn(result);
       this.collection = result;
+    })
+    this.resto.userApi().subscribe((api)=>{
+      this.usercollection = api;
     })
   }
   deleteResto(item: any) {
